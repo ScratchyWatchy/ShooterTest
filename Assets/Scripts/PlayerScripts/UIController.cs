@@ -22,12 +22,8 @@ public class UIController : MonoBehaviour
         FindObjectsOfType<AreaEntered>().ForEach(x => x.onLevelRestart.AddListener(AreaEntered));
         crosshair.color = defaultColor;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+    //These four should be in a separate class
 
     private void AreaEntered(bool isWin)
     {

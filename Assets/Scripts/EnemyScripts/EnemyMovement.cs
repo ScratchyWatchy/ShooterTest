@@ -11,8 +11,7 @@ public class EnemyMovement : CharachterControllerGravity
     {
         _movement = transform.right;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         base.Update();

@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class AreaEntered : MonoBehaviour
 {
+    [HideInInspector]
     public UnityEvent<bool> onLevelRestart;
     public bool isDeath;
 

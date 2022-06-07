@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class CharachterControllerGravity : MonoBehaviour
 {
-        
-    private bool _isGrounded = true;
+    public float GroundedOffset = 0.6f;
+    public float GroundedRadius = 0.5f;
+    public LayerMask GroundLayers;
+    public float speedChangeRate = 10.0f;
+    public float moveSpeed = 4.0f;
+    
     protected float _speed;
     protected float _playerVelocity;
     protected float _playerVerticalVelocity;
-    public float speedChangeRate = 10.0f;
-    public float moveSpeed = 4.0f;
+    protected Vector3 _impactVector;
     protected Vector2 _movement;
+    
+    private bool _isGrounded = true;
     private float _gravity = 17.0f;
     private CharacterController _characterController;
-    protected Vector3 _impactVector;
-    
-    public float GroundedOffset = 0.6f;
 
-    public float GroundedRadius = 0.5f;
     
-    public LayerMask GroundLayers;
+
 
     private void Awake()
     {
@@ -31,8 +32,7 @@ public class CharachterControllerGravity : MonoBehaviour
     {
         _characterController = GetComponent<CharacterController>();
     }
-
-    // Update is called once per frame
+    
     protected void Update()
     {
         GroundedCheck();
@@ -78,7 +78,7 @@ public class CharachterControllerGravity : MonoBehaviour
 
     }
     
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Color transparentGreen = new Color(0.0f, 1.0f, 0.0f, 0.25f);
         Color transparentRed = new Color(1.0f, 0.0f, 0.0f, 0.25f);

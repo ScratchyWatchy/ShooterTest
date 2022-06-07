@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerBullet : Bullet
 {
-
+    //Layers should be in an enum or a dictionary and not referenced by numbers
     private void OnTriggerEnter(Collider other)
     {
         if (!collisionLayers.Contains(other.gameObject.layer)) return;

@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float _velocity;
-    private float _destroyDeleay = 3f;
-    private Coroutine _destroyCoroutine;
     public GameObject explosionParticles;
     public List<int> collisionLayers;
     public int enemyLayer;
+    
+    [SerializeField] private float _velocity;
+    
+    private float _destroyDeleay = 3f;
+    private Coroutine _destroyCoroutine;
     void Start()
     {
         
@@ -22,7 +24,6 @@ public class Bullet : MonoBehaviour
         _destroyCoroutine = StartCoroutine(DelayedTurnOff());
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();

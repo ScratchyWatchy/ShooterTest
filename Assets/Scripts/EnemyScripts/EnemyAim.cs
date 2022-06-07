@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class EnemyAim : MonoBehaviour
 {
-    [SerializeField] private Transform _bulletOrigin;
     public Transform player;
     public GameObject bullet;
     public float breakBetweenShots;
+    
+    [SerializeField] private Transform _bulletOrigin;
     void Start()
     {
         InvokeRepeating(nameof(Shoot),0, breakBetweenShots);

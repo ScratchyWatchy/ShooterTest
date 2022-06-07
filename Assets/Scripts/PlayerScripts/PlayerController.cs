@@ -9,24 +9,21 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : CharachterControllerGravity
 {
-    
-
-    [SerializeField] 
-    private Transform _cameraTransform;
-
-    private Vector2 _look;
-
-    private float _threshold = 0.01f;
-    private float _lookAngle;
-    
     public float topClamp = 90.0f;
     public float bottomClamp = -90.0f;
-    
     public float rotationSpeed = 1.0f;
 
+    [HideInInspector]
     public UnityEvent<bool> onRestartLevel;
+    
+    [SerializeField] 
+    private Transform _cameraTransform;
+    
     private float _imapctDecreaseRate = 0.93f;
     private float _impactTreshold = 0.1f;
+    private Vector2 _look;
+    private float _threshold = 0.01f;
+    private float _lookAngle;
     
     void Start()
     {

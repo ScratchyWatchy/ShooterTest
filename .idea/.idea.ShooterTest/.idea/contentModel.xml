@@ -61,8 +61,36 @@
             <e p="readme.txt" t="Include" />
           </e>
         </e>
+        <e p="Scripts" t="Include">
+          <e p="CharacterScripts" t="Include">
+            <e p="CharachterControllerGravity.cs" t="Include" />
+            <e p="PlayerBullet.cs" t="Include" />
+          </e>
+          <e p="EnemyScripts" t="Include">
+            <e p="EnemyAim.cs" t="Include" />
+            <e p="EnemyBullet.cs" t="Include" />
+            <e p="EnemyMovement.cs" t="Include" />
+          </e>
+          <e p="EnvironmentScripts" t="Include">
+            <e p="AreaEntered.cs" t="Include" />
+          </e>
+          <e p="Helpers" t="Include">
+            <e p="DelayedDestroy.cs" t="Include" />
+            <e p="ObjectPooler.cs" t="Include" />
+          </e>
+          <e p="PlayerScripts" t="Include">
+            <e p="Bullet.cs" t="Include" />
+            <e p="EnemyPointerCheck.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
+            <e p="PlayerWeapon.cs" t="Include" />
+            <e p="UIController.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Settings" t="Include">
+          <e p="DefaultInputs.cs" t="Include" />
+        </e>
         <e p="Shaders" t="Include">
-          <e p="OutlineFill.shader" t="Include" />
+          <e p="Outline.shader" t="Include" />
           <e p="OutlineMask.shader" t="Include" />
         </e>
       </e>
